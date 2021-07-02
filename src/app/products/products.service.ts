@@ -8,8 +8,8 @@ import { Injectable } from "@angular/core";
 export class ProductService
 {
     products = [
-        {id:1, title:'Controller', price: 10.00, fav:false, category: 'electronics'},
-        {id:2, title:'Shovel', price: 30.50, fav:true, category:'outdoors'}
+        {id:1, title:'Controller', price: 10.00, fav:false, category: 'Electronics'},
+        {id:2, title:'Shovel', price: 30.50, fav:true, category:'Outdoors'}
     ];
 
     getProducts()

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from '../cart/cart.service';
 import { ProductService } from './products.service';
 
 @Component({
@@ -10,7 +11,7 @@ export class ProductsComponent
 {
   products = [] as any;
 
-  constructor(private prodServ:ProductService)
+  constructor(private prodServ:ProductService, private cartServ:CartService)
   {
     
   }
@@ -27,11 +28,11 @@ export class ProductsComponent
 
   setFav(item:any)
   {
-    this.prodServ.toggleFavorite(item);
+    this.prodServ.toggleFavorite(item.id);
   }
 
   addToCart(item:any)
   {
-    
+    this.cartServ.add(item);
   }
 }
