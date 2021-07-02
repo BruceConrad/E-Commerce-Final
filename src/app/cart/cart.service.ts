@@ -13,8 +13,20 @@ export class CartService
 
     add(item:any)
     {
-        this.temp.push(item);
-        this.items.next(this.temp);
+        if(!this.temp.find(i => i.id === item.id))
+        {
+            item.quantity = 1;
+            this.temp.push(item);
+            this.items.next(this.temp);
+        }
+        else
+        {
+            if(this.temp.find(i => i.id === item.id))
+            {
+                item.quantity++;
+            }
+
+        }
     }
 
     getItems()

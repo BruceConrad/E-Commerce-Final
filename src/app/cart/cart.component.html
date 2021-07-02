@@ -1,8 +1,10 @@
 <h2>Cart</h2>
+<div>
+    <div *ngFor = "let i of items">
+        <p>{{i.title}}</p><br>
+        <p>{{i.price}}</p><br>
+        <p>{{i.quantity}}</p>
+    </div>
 
-<p *ngFor = "let i of items">
-    {{i.title}}<br>
-    {{i.price}}<br>
-</p>
-
-<p>{{totalPrice}}</p>
+    <p>{{totalPrice}}</p>
+</div>

@@ -2,3 +2,10 @@
 {
     background-color: red;
 }
+
+div
+{
+    margin: 3em 3em;
+    background-color: gray;
+    float: left;
+}

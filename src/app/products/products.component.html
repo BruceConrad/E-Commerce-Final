@@ -6,10 +6,12 @@
     <option>Outdoors</option>
 </select>
 
-<div [ngClass] = "{favorite: i.fav}" *ngFor = "let i of products">
-    <p>{{i.title}}</p><br>
-    <p>{{i.price}}</p><br>
-    <p>{{i.category}}</p><br>
+<div>
+    <div [ngClass] = "{favorite: i.fav}" *ngFor = "let i of products">
+        <p>{{i.title}}</p><br>
+        <p>{{i.price}}</p><br>
+        <p>{{i.category}}</p><br>
 
-    <button (click) = "setFav(i)">Favorite Item</button><button (click) = "addToCart(i)">Add to Cart</button>
+        <button (click) = "setFav(i)">Favorite Item</button><button (click) = "addToCart(i)">Add to Cart</button>
+    </div>
 </div>

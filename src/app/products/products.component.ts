@@ -23,7 +23,14 @@ export class ProductsComponent
 
   filter(e:any)
   {
-    this.products = this.prodServ.filter(e.target.value);
+    if(e.target.value === 'All')
+    {
+      this.products = this.prodServ.getProducts();
+    }
+    else
+    {
+      this.products = this.prodServ.filter(e.target.value);
+    }
   }
 
   setFav(item:any)
