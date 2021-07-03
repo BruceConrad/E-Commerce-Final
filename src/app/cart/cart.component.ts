@@ -21,13 +21,9 @@ export class CartComponent
     this.cartServ.getItems().subscribe((data) => {
       this.items = data;
       let total = 0;
-      for(let i = 0; i < this.items.length; i++)
-      {
-        for(let j = 0; j < this.items[i].quantity; j++)
-        {
-          total += this.items[i].price;
-        }
-      }
+      this.items.forEach(item => {
+        total += item.price * item.quantity;
+      })
       this.totalPrice = total;
     })
   }

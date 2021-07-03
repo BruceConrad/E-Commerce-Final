@@ -2,4 +2,5 @@ div
 {
     background-color: lightblue;
     margin: 3em 3em;
+    float: right;
 }

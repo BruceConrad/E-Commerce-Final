@@ -9,3 +9,8 @@ div
     background-color: gray;
     float: left;
 }
+
+select
+{
+    display: inline-block;
+}
