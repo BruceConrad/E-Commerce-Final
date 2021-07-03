@@ -33,4 +33,11 @@ export class CartService
     {
         return this.items;
     }
+
+    removeItem(item:any)
+    {
+        let index = this.temp.indexOf(item.id);
+        let itemRemoved = this.temp.splice(index,1);
+        this.items.next(this.temp.filter(i => i.id !== itemRemoved.id));
+    }
 }

@@ -27,5 +27,20 @@ export class CartComponent
       this.totalPrice = total;
     })
   }
+
+  removeItem(item)
+  {
+    let totalRemoved = 0;
+    this.items.forEach(i => {
+      if(i.title === item.title)
+      {
+        totalRemoved += i.subTotal;
+      }
+    })
+    this.totalPrice -= totalRemoved;
+    this.cartServ.removeItem(item);
+
+    console.log(this.items);
+  }
 }
 

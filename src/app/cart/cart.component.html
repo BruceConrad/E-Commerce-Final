@@ -1,10 +1,11 @@
 <div>
     <h2>Cart</h2>
     <div *ngFor = "let i of items">
-        <p>{{i.title}}</p><br>
-        <p>{{i.price}}</p><br>
-        <p>{{i.quantity}}</p>
+        <p>Item: {{i.title}}</p><br>
+        <p>Price: {{i.price | currency}}</p><br>
+        <p>Quantity: {{i.quantity}}</p>
+        <button (click) = "removeItem(i)">Remove From Cart</button>
     </div>
 
-    <p>{{totalPrice}}</p>
+    <p>Total: {{totalPrice | currency}}</p>
 </div>
